@@ -27,6 +27,7 @@ plt.close()
 plt.clf()
 
 def normal_cdf(x: float, mu: float = 0, sigma: float = 1) -> float:
+    """Return probability that value distributed normally is less than x"""
     return (1 + math.erf((x - mu) / math.sqrt(2) / sigma)) / 2
 
 xs = [x / 10.0 for x in range(-50, 50)]
